@@ -11,4 +11,7 @@ while True:
     operation = input("Operation to send: ")
     s.send(operation.encode())
 
+    result = s.recv(BUFSIZE).decode()
+    print(result)
+
 s.close()

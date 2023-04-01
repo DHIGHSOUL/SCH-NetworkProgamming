@@ -15,19 +15,34 @@ while True:
     calculateOperation = connection.recv(BUFSIZE).decode()
     if calculateOperation == 'q':
         break
+    elif not calculateOperation:
+        break
 
-    # 문자열 파싱
-    parsingOpeartion = calculateOperation.split()
-    firstOperand = int(parsingOpeartion[0])
-    operator = parsingOpeartion[1]
-    secondOperand = int(parsingOpeartion[2])
+    # 공백이 발견될 시 제거
+    calculateOperation = calculateOperation.replace(" ", "")
 
-    if operator == '+':
-        print(firstOperand + secondOperand)
-    elif operator == '-':
-        print(firstOperand - secondOperand)
-    elif operator == '*':
-        print(firstOperand * secondOperand)
-    elif operator == '/':
-        divideOperands = firstOperand/secondOperand
-        print('%.1f' % divideOperands)
+    # 연산 수행
+    if (calculateOperation.find('+') != -1):
+        calculate = calculateOperation.split('+')
+        first, second = int(calculate[0]), int(calculate[1])
+        result = first + second
+    elif (calculateOperation.find('-') != -1):
+        calculate = calculateOperation.split('-')
+        first, second = int(calculate[0]), int(calculate[1])
+        result = first - second
+    elif (calculateOperation.find('*') != -1):
+        calculate = calculateOperation.split('*')
+        first, second = int(calculate[0]), int(calculate[1])
+        result = first * second
+    elif (calculateOperation.find('/') != -1):
+        calculate = calculateOperation.split('/')
+        first, second = float(calculate[0]), float(calculate[1])
+        result = first / second
+
+    if isinstance(result, float):
+        resultToString = "%.1f" % result
+    else:
+        resultToString = str(result)
+
+    # 클라이언트로 전달
+    connection.send(resultToString.encode())
