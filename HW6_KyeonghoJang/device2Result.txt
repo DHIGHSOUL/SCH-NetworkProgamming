@@ -1,0 +1,11 @@
+Wed Apr  5 00:34:56 2023: Device2: Heartbeat=65, Steps=3156, Cal=2188
+Wed Apr  5 00:36:01 2023: Device2: Heartbeat=127, Steps=3978, Cal=2972
+Wed Apr  5 00:36:02 2023: Device2: Heartbeat=63, Steps=2454, Cal=1231
+Wed Apr  5 00:36:02 2023: Device2: Heartbeat=93, Steps=2805, Cal=1323
+Wed Apr  5 00:36:03 2023: Device2: Heartbeat=102, Steps=3547, Cal=2452
+Wed Apr  5 00:36:04 2023: Device2: Heartbeat=138, Steps=5058, Cal=2007
+Wed Apr  5 00:38:07 2023: Device2: Heartbeat=130, Steps=3766, Cal=3898
+Wed Apr  5 00:38:07 2023: Device2: Heartbeat=119, Steps=5979, Cal=1517
+Wed Apr  5 00:38:08 2023: Device2: Heartbeat=43, Steps=3925, Cal=3354
+Wed Apr  5 00:38:09 2023: Device2: Heartbeat=101, Steps=3546, Cal=1797
+Wed Apr  5 00:38:09 2023: Device2: Heartbeat=131, Steps=2460, Cal=1059
